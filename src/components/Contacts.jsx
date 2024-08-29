@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { Contactslist } from "./Contactslist";
 
 export function Contacts() {
+    const [contacts,SetContacts] = useState ([]);
     const [contact, SetContact] = useState({
         name: '',
         lastName: '',
@@ -13,8 +15,14 @@ export function Contacts() {
 
         SetContact((contact) => ({ ...contact, [name]: value }));
     };
-    const addHandler = () =>{
-        console.log(contact);
+    const addHandler = () => {
+        SetContacts ((contacts) =>[...contacts,contact]);
+        SetContact ({
+            name: '',
+            lastName: '',
+            email: '',
+            phone: '',
+        }) ;
     }
     return (
         <>
@@ -25,6 +33,7 @@ export function Contacts() {
                 <input type="number" placeholder="Phone" name="phone" value={contact.phone} onChange={changeHandler} />
                 <button onClick={addHandler}>Add Contact</button>
             </div>
+            <Contactslist contacts={contacts} />
         </>
     )
 
