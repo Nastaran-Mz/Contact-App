@@ -1,13 +1,8 @@
 import { useState } from "react";
 import { Contactslist } from "./Contactslist";
+import inputs from "../constans/input";
 
 
-const inputs = [
-    { type: 'text', name: 'name', placeholder: 'Name' },
-    { type: 'text', name: 'lastName', placeholder: 'Last Name' },
-    { type: 'email', name: 'email', placeholder: 'Email' },
-    { type: 'number', name: 'phone', placeholder: 'Phone' },
-];
 export function Contacts() {
     const [contacts, SetContacts] = useState([]);
     const [alert, SetAllert] = useState("");
