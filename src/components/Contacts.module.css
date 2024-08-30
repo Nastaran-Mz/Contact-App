@@ -41,3 +41,16 @@
 .form button:hover{
     box-shadow: #0c2ad487 0px 7px 29px 0px;
 }
+.alert{
+    width: 100%;
+    height: 40px;
+    margin: 5px 0px 25px;
+}
+.alert p{
+    background-color: #ffebee;
+    color: #f44336;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+
+}
