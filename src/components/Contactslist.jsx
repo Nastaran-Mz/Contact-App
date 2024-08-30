@@ -2,6 +2,7 @@
 import Contactitem from "./Contactitem"; 
 
 
+// eslint-disable-next-line react/prop-types
 function Contactslist({ contacts , deleteHandler}) {
     return (
         <>

@@ -1,5 +1,5 @@
 // eslint-disable-next-line react/prop-types
-function Contactitem({ data: { id, name, lastName, email, phone } , deleteHandler ,}) {
+function Contactitem({ data: { id, name, lastName, email, phone } , deleteHandler }) {
         
 
    

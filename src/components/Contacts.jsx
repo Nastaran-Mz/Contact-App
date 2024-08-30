@@ -39,6 +39,7 @@ export function Contacts() {
         });
     }
 
+    // eslint-disable-next-line no-unused-vars
     const deleteHandler = (id)  => {
       const newContacts = contacts.filter((contact) => contact.id !== id );
       SetContacts(newContacts);
