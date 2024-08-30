@@ -4,6 +4,7 @@
     align-items: center;
 }
 .form{
+    width: fit-content;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -23,4 +24,20 @@
     color: #304ffe;
     font-size: 1rem;
 
+}
+.form button{
+    width: calc(90% + 20px);
+    height: 40px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #304ffe;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #fff;
+    transition: 0.3s all ease-in-out;
+
+}
+.form button:hover{
+    box-shadow: #0c2ad487 0px 7px 29px 0px;
 }
