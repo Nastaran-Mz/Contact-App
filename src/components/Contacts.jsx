@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { Contactslist } from "./Contactslist";
+import  Contactslist  from "./Contactslist";
 import inputs from "../constans/input";
-
+import { v4 } from "uuid";
 
 export function Contacts() {
     const [contacts, SetContacts] = useState([]);
     const [alert, SetAllert] = useState("");
     const [contact, SetContact] = useState({
+        id: '',
         name: '',
         lastName: '',
         email: '',
@@ -28,13 +29,19 @@ export function Contacts() {
 
         }
         SetAllert(" ");
-        SetContacts((contacts) => [...contacts, contact]);
+        const newContact = {...contact , id: v4()}
+        SetContacts((contacts) => [...contacts, newContact]);
         SetContact({
             name: '',
             lastName: '',
             email: '',
             phone: '',
         });
+    }
+
+    const deleteHandler = (id)  => {
+      const newContacts = contacts.filter((contact) => contact.id !== id );
+      SetContacts(newContacts);
     }
     return (
         <>
@@ -56,7 +63,7 @@ export function Contacts() {
                 <button onClick={addHandler}>Add Contact</button>
             </div>
             <div>{alert && <p>{alert}</p>}</div>
-            <Contactslist contacts={contacts} />
+            <Contactslist contacts={contacts} SetContacts={SetContacts} />
         </>
     )
 
