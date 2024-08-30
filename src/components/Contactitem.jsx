@@ -1,3 +1,5 @@
+import styles from "./Contactitem.module.css"
+
 // eslint-disable-next-line react/prop-types
 function Contactitem({ data: { id, name, lastName, email, phone } , deleteHandler }) {
         
@@ -6,7 +8,7 @@ function Contactitem({ data: { id, name, lastName, email, phone } , deleteHandle
 
     return (
       
-            <li key={id}>
+            <li className={styles.item}>
                 <p>
                     {name} {lastName}
                 </p>
