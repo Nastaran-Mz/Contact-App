@@ -1,19 +1,16 @@
-.item{
+
+.item {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    background-color: #f5f5f5;
-    color: #6b6b6f;
     padding: 10px 20px;
     margin: 15px;
     border-radius: 10px;
+    background-color: #f5f5f5;
+   
+    transition: background-color 0.3s ease;
 }
-.item p{
-    flex-basis: 0;
-    flex-grow: 1;
 
-
-}
 .item span{
     display: inline-block;
     font-size: 1.3rem;
@@ -25,16 +22,57 @@
     line-height: 35px;
     border-radius: 50%;
 }
-.item button{
+p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+button {
     width: 35px;
     height: 35px;
+    align-self: flex-end;
+    padding: 5px 10px;
     background-color: #fff;
     border: none;
     border-radius: 50%;
+    color: white;
     cursor: pointer;
-    transition: 0.2s all ease-in-out;
-
+    transition: background-color 0.3s ease;
 }
-.item button:hover{
-    font-size: 1.5rem;
+
+button:hover {
+    box-shadow: #0c2ad487 0px 7px 29px 0px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .item {
+        padding: 10px;
+        margin: 8px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 4px 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        padding: 8px;
+        margin: 5px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    button {
+        padding: 3px 6px;
+        font-size: 12px;
+    }
 }
